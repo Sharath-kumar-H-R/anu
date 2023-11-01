@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  background-image: url("https://i.pinimg.com/236x/a3/63/f5/a363f55538ba6e3b36aa04064bb72f8d.jpg");
+}
+
+.container {
+  text-align: center;
+margin-top: ;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #ff5252;
+}
+
+.message-container {
+  margin-top: 30px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anu I Want to Tell you Something </h1>
+        <p>I have some feelings for you...</p>
+        <button id="generateBtn" onclick="generateMessage()">Click  me dear</button>
+        <div class="message-container">
+          <p id="message"></p>
+        </div>
+      </div>
+      <script>
+        const loveMessages = [
+  "Raaa you are my everything, I love you so much, and I miss you terribly!",
+  "You mean the world to me Chinni. I love you beyond words and miss you deeply.",
+  "My love for you is infinite Anu. I miss you dearly and love you more than anything.",
+  "Anuuuuu you are the love of my life. I love you endlessly and miss you every moment.",
+  
+];
+
+function generateMessage() {
+  const messageContainer = document.getElementById('message');
+  const randomIndex = Math.floor(Math.random() * loveMessages.length);
+  const message = loveMessages[randomIndex];
+  messageContainer.textContent = message;
+}
+
+      </script>
+</body>
+</html>
